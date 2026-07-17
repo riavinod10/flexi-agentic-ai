@@ -195,6 +195,16 @@
   .gpa-badge{font-family:'IBM Plex Mono',monospace;background:var(--paper-dim);padding:6px 12px;font-size:13px;height:fit-content;}
   .coursework{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;}
 
+  /* ---------- Voice agent ---------- */
+  .agent-card{
+    border:1px solid var(--line);background:var(--card);
+    padding:40px;display:flex;align-items:center;justify-content:center;
+    min-height:120px;position:relative;
+  }
+  .agent-card::before{
+    content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--coral);
+  }
+
   /* ---------- Footer ---------- */
   footer{padding:70px 0 50px;border-top:1px solid var(--line);margin-top:20px;}
   .footer-grid{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:30px;}
@@ -237,6 +247,7 @@
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#education">Education</a>
+      <a href="#talk">Talk</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -501,6 +512,20 @@
       </div>
     </section>
   </div>
+  <div class="wrap divider">
+    <svg class="waveform" viewBox="0 0 1000 60" preserveAspectRatio="none"><path d="M0,30 L780,30 L798,8 L812,52 L826,30 L1000,30" /></svg>
+  </div>
+
+  <!-- VOICE AGENT -->
+  <div class="wrap">
+    <section id="talk">
+      <div class="sec-head"><span class="sec-num mono">08</span><h2 class="sec-title">Talk to Ria</h2></div>
+      <p class="sec-sub" style="margin-bottom:24px;">An AI voice agent trained on this resume — ask it about the projects, experience, or research above.</p>
+      <div class="agent-card">
+        <elevenlabs-convai agent-id="agent_5401kxqjz97xehpt30kd6kr1j9xx"></elevenlabs-convai>
+      </div>
+    </section>
+  </div>
 </main>
 
 <footer id="contact">
@@ -524,7 +549,6 @@
   </div>
 </footer>
 
-<elevenlabs-convai agent-id="agent_5401kxqjz97xehpt30kd6kr1j9xx"></elevenlabs-convai>
 <script src="https://unpkg.com/@elevenlabs/convai-widget-embed" async type="text/javascript"></script>
 
 <script>
